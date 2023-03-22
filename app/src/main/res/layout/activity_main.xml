@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Watch"
+        android:layout_marginTop="-20dp"
+        style="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textStyle="italic"
+        android:textColor="@color/purple_500"
+        android:textAlignment="center"/>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="10dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_corner"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_00_00_00"
+        android:padding="10dp"
+        android:textColor="#0652DD"
+        android:textSize="50sp"
+        android:textAlignment="center"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/startStopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint = "#fff"
+            app:tint="@color/purple_500"
+            android:contentDescription="@string/fab_content_desc"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/resetButton"
+            app:layout_constraintTop_toTopOf="parent" >
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/resetButton"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint = "#fff"
+            app:tint="@color/purple_500"
+            android:contentDescription="@string/fab_content_desc"
+            android:src="@drawable/ic_baseline_stop_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/startStopButton"
+            app:layout_constraintTop_toTopOf="parent" >
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
